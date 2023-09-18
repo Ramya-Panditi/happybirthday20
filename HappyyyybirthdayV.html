@@ -33,19 +33,29 @@
                 transform: translateX(-100%);
             }    
         }
+       
+/* Add a media query to adjust margin-top for smaller screens */
+        @media screen and (max-width: 560px) {
+            .letter {
+                position: sticky;
+                top: 100%; 
+                left: 150%; 
+                background-color: #FFF3E2;
+                transform: translate(-10%, -250%);  /* Adjust this value as needed for smaller screens */
+            }
+        }
         .letter {
             position: sticky;
-            top: 10%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-8%, -200%); /* Center the element */
-            background-color: #FA9884;
-            /* padding-top: 2%; */
-            margin: 100px;
+            top: 10%; 
+            left: 50%; 
             padding: 20px;
+            margin:195px;
+            transform: translate(-50%, -250%); 
+            background-color: #FA9884;
             width: 400px;
             height: 200px;
             overflow-x: hidden;
-            /* overflow-y: scroll; */
+            
         }
 
         .letter p{
@@ -126,6 +136,11 @@
             animation-fill-mode: forwards;
            
         }
+        .smail{
+            position: relative;
+            top:-400px;
+            left: 0;
+        }
 
         @keyframes move-heart {
             0% {
@@ -188,9 +203,9 @@
             </div>
     
             <!-- LETTER  -->
-            <div class="container-fluid letter col-lg-4 col-md-6 col-sm-8 col-11 mx-4">
+            <div class="container-fluid letter">
                 <h1 class="display-5" id = "heading" style="color:#FFE5CA;">Hey V</h1>
-                <p class="display-6 text-sm-small text-md-small text-small" id="letter">
+                <p class="display-6 text-sm-small text-md-small m-auto text-small" id="letter">
                      To say that I initially wanted to do a small sasta website for paks and while I was doing it , it occured to me that your birthday is coming up and why not do one for you??
                      I know the beginning of this letter is not flattering. Also I think this turned out to be real cute.Please I know its cute.
                      I just realised that Ive been writing to you since we were 16? I made a small book wala thing for you in our 10th although I didnt have enough time to write.
@@ -208,10 +223,7 @@
             </div>
         </div>
     
-    </center>
-    <!-- SMALL LETTERS -->
-   <center>
-    <div class="container-fluid">
+    <div class="container-fluid smail">
         <div class="row">
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 my-3">
                 <div class="heart z-2" ><i class="fa fa-heart" id="heart-1"></i></div>
@@ -323,7 +335,7 @@
             </div>       
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 my-3">
                 <div class="heart z-2" ><i class="fa fa-heart" id="heart-10"></i></div>
-                <button class = "letter-btn" id = "lasya" onclick="handleButtonClick(9)">
+                <button class = "letter-btn" id = "lasya" onclick="handleButtonClick(10)">
                     <div class="card">
                         <div class="white-border m-auto">
                             <span class="line d-block" id = "left"></span>
@@ -335,7 +347,7 @@
             </div>       
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 my-3">
                 <div class="heart z-2" ><i class="fa fa-heart" id="heart-11"></i></div>
-                <button class = "letter-btn" id = "Jan" onclick="handleButtonClick(9)">
+                <button class = "letter-btn" id = "Jan" onclick="handleButtonClick(11)">
                     <div class="card">
                         <div class="white-border m-auto">
                             <span class="line d-block" id = "left"></span>
@@ -388,7 +400,7 @@
                         break;
                     case 8:
                         head.textContent = "PREETHI"
-                        content = 'PREETHI IS TOO LAZY DONT MIND HER';
+                        content = "Nightmares are afraid of Vidhi. Vidhi affects viruses. Holidays celebrate Vidhi. The Matrix escaped Vidhi. Vidhi makes onions cry. Vidhi created iPhone 9. When Vidhi's at your house, you're the guest. Vidhi taught the chef how to cook. Vidhi knows all the words in the dictionary, Vidhi doesn’t think inside the box, Vidhi is the box. Vidhi arrests the police. Vidhi forces websites to accept her cookies. Vidhi gives gifts to Santa. Sun takes Vitamin D from Vidhi. Vidhi doesn’t live under a rock, the rock lives under Vidhi. Vidhi tells her teacher's to bring their parents tomorrow. Vibe checked passed Vidhi. Vidhi inhales Carbon Dioxide and exhales Oxygen. Vidhi can count till infinity. Vidhi is the best best best best. Vidhi ka pura khandan knows that she in dating someone. Aaaaa, Then your ability to find humor in the chaos is a gift bhai.I still remember when Bhargavi gave me her personal book and asked me write something about her, I handed over the book to you and you wrote all the stuff. And us bunking classes, going and sitting on the top stairs, then talking about the whole world. I can't help but smile at the thought of all the hilarious moments we've been sharing. Your friendship has been a constance source of joy and strength in my life. I dedicate all the Imran Hashmi songs to you. Look after yourself your body, your work, academics and stuff (self-care)furthermore aaaah overthinking leads to brain clots which further leads to terribly operations and death at last. This is all what's in my mind for now, tataa. I love you baby girl.";
                         break;
                     case 9:
                         head.textContent = "NITHYA"
@@ -400,7 +412,8 @@
                         break; 
                     case 11:
                         head.textContent=  "JAHNAVI"
-                        content = "Jab koi baat bigad jaaye Jab koi mushkil bad jaaye Hum Hein na saath Tera ooooooo humnava👯‍♀";
+                        content = "Jab koi baat bigad jaaye Jab koi mushkil bad jaaye Hum Hein na saath Tera ooooooo humnava 👯‍♀";
+                        break;
 
                     default:
                         content = 'Default Content';
